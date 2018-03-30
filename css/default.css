@@ -1,0 +1,133 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: #cfd8dc;
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+div#container {
+    position: relative;
+    width: 700px;
+    margin: 0 auto;
+    padding: 10px;
+    background-color: #455a64;
+}
+
+nav ul {
+    list-style:none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul li {
+    margin: 10px 0 10px 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    background-color: #536dfe;
+    padding: 5px 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 5%;
+}
+
+nav ul li a:hover {
+    background-color: #3c4fbb;
+}
+
+header {
+    padding: 40px 0 0 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+section#trips {
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+article.trip, article.tippedTrip {
+    position: relative;
+    background-color: #607d8b;
+    margin: 5px;
+    padding: 5px;
+    width: 200px;
+}
+
+article.tippedTrip {
+    background-color: #212121;
+}
+
+article.trip > .city {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+article.trip > time, article.tippedTrip > time {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
+
+article.trip > .rating {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+    width: 50px;
+}
+
+footer {
+    background-color: #CFD8DC;
+    color: #212121;
+    padding: 45px 10px 5px 0; 
+    text-align: right;
+    font-weight: bold;
+}
+
+h1 {
+    font-size: 1.2em;
+    padding: 10px;
+}
+
+.label {
+    float: left;
+    width: 70px;
+}
+
+input, textarea {
+    width: 300px;
+    background-color: #CFD8DC;
+    border: 1px solid black;
+    padding: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.0em;
+}
+
+textarea {
+    resize: vertical;
+}
+
+input[type="button"] {
+    border: 2px solid #7d8486;
+    font-size: 1.1em;
+    margin-left: 250px;
+    margin-bottom: 10px;
+    width: 150px;
+    cursor: pointer;
+}
+
+input[type="button"]:hover {
+    background-color: rgb(174, 182, 185);
+}
+
+.label, .input {
+    padding: 5px 10px;
+}
+

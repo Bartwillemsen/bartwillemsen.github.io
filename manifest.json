@@ -1,0 +1,24 @@
+
+{
+    "short_name": "MyTrips",
+    "name": "My awesome trips",
+    "icons": [
+    {
+        "src": "icons/trips32.png",
+        "type": "image/png",
+        "sizes": "32x32"
+    },
+    {
+        "src": "icons/trips64.png",
+        "type": "image/png",
+        "sizes": "64x64"
+    },
+    {
+        "src": "icons/trips128.png",
+        "type": "image/png",
+        "sizes": "128x128"
+    }
+    ],
+    "start_url": "index.html",
+    "display": "standalone"
+}

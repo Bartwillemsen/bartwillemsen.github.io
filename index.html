@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyTrips</title>
+
+    <link rel="manifest" href="/manifest.json">
+
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 700px)">
+</head>
+<body>
+        <template id="dummyTrip">
+            <article class="tippedTrip">
+                <div class="where"></div>
+                <time class="when"></time>
+                <div class="why"></div>
+            </article>
+        </template>
+
+    <div id="container">
+        <header>MyTrips</header>
+        <!-- Navigation Bar -->
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="my-trips.html">My Trips</a></li>
+                <li><a href="tip-a-trip.html">Tip a Trip</a></li>
+            </ul>
+        </nav>
+        <!-- Trips -->
+        <section id="trips">
+            <article class="trip">
+                <div class="city">Rome</div>
+                <time>12/5/2005</time>
+                <div class="review">Had a great time, good food and splendid weather.</div>
+                <meter class="rating" value="4" min="1" max="10" low="4" high="8" optimum="10">9</meter>
+            </article>
+            <article class="trip">
+                <div class="city">Pyongyang</div>
+                <time>12/5/2012</time>
+                <div class="review">I walked away from the guide and they threw me in jail. Even though I extended my holiday with a few weeks, I cannot recommend it. :(</div>
+                <meter class="rating" value="3" min="1" max="10" low="4" high="8" optimum="10">3</meter>
+            </article>
+            <article class="trip">
+                <div class="city">Madrid</div>
+                <time>12/8/2014</time>
+                <div class="review">Hot summers, but really awesome city. Lots of things to do and see!</div>
+                <meter class="rating" value="7" min="1" max="10" low="4" high="8" optimum="10">7</meter>
+            </article>
+            <article class="trip">
+                <div class="city">Manilla</div>
+                <time>12/8/2015</time>
+                <div class="review">Something different. The division between rich and poor is easy to spot. However, there are some reall nice places in this huge city.</div>
+                <meter class="rating" value="7" min="1" max="10" low="4" high="8" optimum="10">7</meter>
+            </article>
+        </section>
+    
+        <footer>
+            <span id="author">Waldo</span>
+            <span>&nbsp;&copy;&nbsp;</span>
+            <span id="copyrightyear"></span>
+        </footer>
+    </div>
+
+    <script src="js/trips.js"></script>
+    <script>
+        setFooterDate(document.querySelector('#copyrightyear'));
+        loadTrips();
+
+        let ws = new WebSocket('ws://localhost:3000/trips')
+
+        ws.onopen = function() {
+            console.log('connection opened');
+        };
+
+        ws.onmessage = function() {
+            console.log('message received');
+        };
+
+        ws.onclose = function() {
+            console.log('connection closed');
+        };
+    </script>
+</body>
+</html>

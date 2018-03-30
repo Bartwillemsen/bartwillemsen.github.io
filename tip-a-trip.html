@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MyTrips</title>
+
+    <link rel="stylesheet" href="css/default.css">
+    <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width: 700px)">
+</head>
+<body>
+    <div id="container">
+        <div id="header">MyTrips</div>
+        <div id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="my-trips.html">My Trips</a></li>
+                <li><a href="tip-a-trip.html">Tip a Trip</a></li>
+            </ul>
+            <div class="clearfix"></div>
+        </div>
+
+        <h1>Tip a Trip</h1>
+        <p>Use the form below to tip me a trip which I would like!</p>
+        <form method="POST">
+            <div class="label">
+                <label for="inputWhere">Where?</label>
+            </div>
+            <div class="input">
+                <input type="text" id="inputWhere" name="where">
+                What is the location of the trip?
+            </div>
+            <div class="label">
+                <label for="inputWhen">When?</label>
+            </div>
+            <div class="input">
+                <input type="text" id="inputWhen" name="when">
+                What is the location of the trip?
+            </div>
+            <div class="label">
+                <label for="inputWhy">Why?</label>
+            </div>
+            <div class="input">
+                <textarea type="text" rows="5" cols="30" id="inputWhy" name="why"></textarea>
+                Why should I go here?
+            </div>
+
+            <input type="button" id="btnTip" onclick="addTrip();" value="Tip me!">
+        </form>
+    
+        <div id="footer">
+            <span id="author">Waldo</span>
+            <span>&nbsp;&copy;&nbsp;</span>
+            <span id="copyrightyear"></span>
+        </div>
+    </div>
+
+    <script src="js/trips.js" type="text/javascript"></script>
+    <script>
+        setFooterDate(document.querySelector('#copyrightyear'));
+    </script>
+</body>
+</html>
